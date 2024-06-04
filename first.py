@@ -78,17 +78,15 @@ def nextAndPast(number: str) -> str:
     return output
 
 def parts(groups: list[int]) -> int:
-    count_humans: int = 0
+    count_pc: int = 0
     if not isinstance(groups, list):
         return 0
     for each in groups:
         try:
             each = int(each)
-            count_humans += each
+            count_pc += math.ceil(each / 2)
         except Exception as e:
             print(f"exc: {e}. Not valid {each}")
-
-    count_pc = math.ceil(count_humans / 2)
 
     return count_pc
 

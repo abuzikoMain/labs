@@ -90,3 +90,11 @@ class TestParts:
     def test_parts_valid_input(self):
         data = [12, 14, 17]
         assert parts(data) == 22
+        data = [20, 21, 22]
+        assert parts(data) == 32
+        data = [26, 20, 16]
+        assert parts(data) == 31
+        data = [25, 21, 23]
+        assert parts(data) == 36
+        data = [17, 19, 18]
+        assert parts(data) == 28
