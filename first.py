@@ -1,6 +1,6 @@
 import math
 
-def sumOfThree(nums: list) -> float:
+def sumOfThree(nums: list[str]) -> float:
     sum: float = 0
     for each in nums:
         try:
@@ -9,7 +9,6 @@ def sumOfThree(nums: list) -> float:
         except Exception as e:
             print(f"Exc: {e}")
     return sum
-
 
 def AreaOfRightTriangle(base: str, height: str) -> float:
     area: float = 1
@@ -77,7 +76,7 @@ def nextAndPast(number: str) -> str:
 
     return output
 
-def parts(groups: list[int]) -> int:
+def parts(groups: list[str]) -> int:
     count_pc: int = 0
     if not isinstance(groups, list):
         return 0
@@ -90,9 +89,8 @@ def parts(groups: list[int]) -> int:
 
     return count_pc
 
+def lace_length(a, b, l, N):
+    ...
+
 if __name__ == "__main__":
-    # nums: list = [input("1:"),input("2:"),input("3:")]
-    # print(sumOfThree(nums))
-
-    print()
-
+    ...
