@@ -70,67 +70,77 @@ def output_task_eleven(x: int) -> str: ## Task 11
         return f'{first} equal {second}'
     return f'{first} is bigger then {second}' if first > second else f'{second} is bigger then {first}'
 
-def is_number_palindrom(number: int) -> bool: ## Task 12
-    str_number = str(number)
-    r: int = len(str_number) - 1
-    l: int = 0
-    while l >= r:
-        if str_number[r] != str_number[l]:
-            return False
-        r -=1
-        l +=1
-    return True
+ ## Task 12
+number = input("Task 12: ")
+str_number = str(number)
+r: int = len(str_number) - 1
+l: int = 0
+while l >= r:
+    if str_number[r] != str_number[l]:
+        print("False")
+        break
+    r -=1
+    l +=1
+print("True")
 
-def output_task_thirteen(number: int) -> str: ## Task 13
-    str_number = str(number)
-    is_some_char_sames: bool = False
-    is_all_chars_same: bool = False
+## Task 13
+number = input("Task 13: ")
+str_number = str(number)
+is_some_char_sames: bool = False
 
-    temp_dict = {}
-    for each in str_number:
-        temp_dict[each] = temp_dict.get(each, 0) + 1
-        if temp_dict[each] > 1:
-            is_some_char_sames = True
+temp_dict = {}
+for each in str_number:
+    temp_dict[each] = temp_dict.get(each, 0) + 1
+    if temp_dict[each] > 1:
+        is_some_char_sames = True
 
-    if len(temp_dict) == 1:
-        is_all_chars_same = True
-        return 'All num\'s is same'
-    elif is_some_char_sames:
-        return 'Some num\'s is same'
-    else:
-        return 'All num\'s unique'
+if len(temp_dict) == 1:
+    print('All num\'s is same')
+elif is_some_char_sames:
+    print('Some num\'s is same')
+else:
+    print('All num\'s unique')
 
-def output_task_fourteen(number: int) -> str: ## Task 14
-    str_number = str(number)
-    return 'At last num is even' if int(str_number[-1]) % 2 == 0 else 'At last num is not even'
+del number, str_number, is_some_char_sames, temp_dict
+
+
+ ## Task 14
+str_number = input("Task 14: ")
+print('At last num is even' if int(str_number[-1]) % 2 == 0 else 'At last num is not even')
+del str_number
 
 ### Task 15 not necessary 
 
 ## Task 16
-print("Task 16:", input("Task16 mass: ") // 1000)
+print("Task 16:", int(input("Task 16 mass: ")) // 1000)
 
 ## Task 17
-print("Task 17: ", 530 // 130)
+print("Task 17:", 530 // 130)
 
 ## Task 18 Непонимаю условие
 
-number = input("Task 20: ") ## Task 19
-print(int(str(number)[::-1]))
+## Task 19
+print(input("Task 19 number: ")[::-1])
 
-number = input("Task 20: ") ## Task 20
-print(int(str(number)[:1:] + str(number)[0]))
+## Task 20
+number = input("Task 20: ")
+print(number[1::] + number[0])
+del number
 
 ## Task 21
 number = input("Task 21: ")
-print(int(str(number)[-1] + str(number)[:1:]))
+print(number[-1] + number[:1:])
+del number
 
 ## Task 22
 number = input("Task 22: ")
-print(int(str(number)[1:2:] + str(number)[0:1:] + str(number)[2:]))
+print(number[1:2:] + number[0:1:] + number[2:])
+del number
 
 ## Task 23
 number = input("Task 23: ")
-print(int(str(number)[0:1:] + str(number)[2:] + str(number)[1:2:]))
+print(number[0:1:] + number[2:] + number[1:2:])
+del number
 
 def get_permutations(number: int) -> list: ## Task 24
     str_number = str(number)
@@ -150,13 +160,14 @@ def generate_permutations(remaining_digits: str, current_permutation: str, permu
             generate_permutations(new_remaining, current_permutation + next_digit, permutations)
 
 ## task 25
-number = input("Task 25: ")
+number = int(input("Task 25: "))
 one_count = 0
 ten_count = number // 10
 for each in str(number):
     if each == "1":
         one_count += 1
 print(f'One count: {one_count}, ten count: {ten_count}')
+del number, one_count, ten_count
 
 ## Task 26
 temp_number = str(237)
@@ -164,4 +175,6 @@ last_num, temp_number = temp_number[0], int(temp_number[1::])
 temp_number *=10
 temp_number += last_num
 print(temp_number)
+
+del temp_number, last_num, temp_number
 
