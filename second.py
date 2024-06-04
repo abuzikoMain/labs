@@ -106,29 +106,31 @@ def output_task_fourteen(number: int) -> str: ## Task 14
 
 ### Task 15 not necessary 
 
-def output_task_sixteen(mass: int) -> int: ## Task 16
-    return mass // 1000
+## Task 16
+print("Task 16:", input("Task16 mass: ") // 1000)
 
-def output_task_seventeen() -> int: ## Task 17
-    return 530 // 130
+## Task 17
+print("Task 17: ", 530 // 130)
 
-def output_task_eightteen(): ## Task 18 Непонимаю условие
-    ...
+## Task 18 Непонимаю условие
 
-def output_task_nineteen(number: int) -> int: ## Task 19
-    return int(str(number)[::-1])
+number = input("Task 20: ") ## Task 19
+print(int(str(number)[::-1]))
 
-def output_task_twenty(number: int) -> int: ## Task 20
-    return int(str(number)[::-1])
+number = input("Task 20: ") ## Task 20
+print(int(str(number)[:1:] + str(number)[0]))
 
-def output_task_twentyone(number: int) -> int: ## Task 21
-    return int(str(number)[1::] + str(number)[:1:])
+## Task 21
+number = input("Task 21: ")
+print(int(str(number)[-1] + str(number)[:1:]))
 
-def output_task_twentytwo(number: int) -> int: ## Task 22
-    return int(str(number)[1:2:] + str(number)[0:1:] + str(number)[2:])
+## Task 22
+number = input("Task 22: ")
+print(int(str(number)[1:2:] + str(number)[0:1:] + str(number)[2:]))
 
-def output_task_twentythree(number: int) -> int: ## Task 23
-    return int(str(number)[0:1:] + str(number)[2:] + str(number)[1:2:])
+## Task 23
+number = input("Task 23: ")
+print(int(str(number)[0:1:] + str(number)[2:] + str(number)[1:2:]))
 
 def get_permutations(number: int) -> list: ## Task 24
     str_number = str(number)
@@ -147,17 +149,19 @@ def generate_permutations(remaining_digits: str, current_permutation: str, permu
             new_remaining = remaining_digits[:i] + remaining_digits[i+1:]
             generate_permutations(new_remaining, current_permutation + next_digit, permutations)
 
-def output_task_twentyfive(number: int) -> str: ## task 25
-    one_count = 0
-    ten_count = number // 10
-    for each in str(number):
-        if each == "1":
-            one_count += 1
-    return f'One count: {one_count}, ten count: {ten_count}'
+## task 25
+number = input("Task 25: ")
+one_count = 0
+ten_count = number // 10
+for each in str(number):
+    if each == "1":
+        one_count += 1
+print(f'One count: {one_count}, ten count: {ten_count}')
 
-# Из трехзначного числа x вычли его последнюю цифру. Когда результат разделили 
-# на 10, а к частному слева приписали последнюю цифру числа x, то получилось число 
-# 237. Найти число x. 
+## Task 26
+temp_number = str(237)
+last_num, temp_number = temp_number[0], int(temp_number[1::])
+temp_number *=10
+temp_number += last_num
+print(temp_number)
 
-def output_task_twentysix(number: int) -> int: ## Task 26
-    ...
