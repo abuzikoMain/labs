@@ -1,3 +1,5 @@
+import math
+
 def sumOfThree(nums: list) -> float:
     sum: float = 0
     for each in nums:
@@ -75,9 +77,24 @@ def nextAndPast(number: str) -> str:
 
     return output
 
+def parts(groups: list[int]) -> int:
+    count_humans: int
+    if not isinstance(groups, list):
+        return 0
+    for each in groups:
+        try:
+            each = int(each)
+            count_humans += each
+        except Exception as e:
+            print(f"exc: {e}. Not valid {each}")
+
+    count_pc = math.ceil(count_humans / 2)
+
+    return count_pc
+
 if __name__ == "__main__":
     # nums: list = [input("1:"),input("2:"),input("3:")]
     # print(sumOfThree(nums))
 
-    print(clock("444"))
+    print()
 
