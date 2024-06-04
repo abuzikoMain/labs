@@ -124,4 +124,41 @@ def output_task_twenty(number: int) -> int: ## Task 20
 def output_task_twentyone(number: int) -> int: ## Task 21
     return int(str(number)[1::] + str(number)[:1:])
 
-print(output_task_twentyone(145))
+def output_task_twentytwo(number: int) -> int: ## Task 22
+    return int(str(number)[1:2:] + str(number)[0:1:] + str(number)[2:])
+
+def output_task_twentythree(number: int) -> int: ## Task 23
+    return int(str(number)[0:1:] + str(number)[2:] + str(number)[1:2:])
+
+def output_task_twentyfour(number: int) -> list: ## Task 24
+    ...
+
+def get_permutations(number):
+    str_number = str(number)
+    if len(set(str_number)) != len(str_number):
+        return "Число должно содержать только различные цифры."
+    permutations = []
+    generate_permutations(str_number, "", permutations)
+    return permutations
+
+def generate_permutations(remaining_digits, current_permutation, permutations):
+    if len(remaining_digits) == 0:
+        permutations.append(int(current_permutation))
+    else:
+        for i in range(len(remaining_digits)):
+            next_digit = remaining_digits[i]
+            new_remaining = remaining_digits[:i] + remaining_digits[i+1:]
+            generate_permutations(new_remaining, current_permutation + next_digit, permutations)
+
+number = int(input("Введите число, в котором все цифры различны: "))
+
+permutations = get_permutations(number)
+if isinstance(permutations, list):
+    print("Все возможные числа, образованные при перестановке цифр заданного числа:")
+    for num in permutations:
+        print(num)
+else:
+    print(permutations)
+
+
+print(output_task_twentytwo(451))
