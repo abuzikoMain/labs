@@ -1,4 +1,4 @@
-def sumOfThree(nums: list):
+def sumOfThree(nums: list) -> float:
     sum: float = 0
     for each in nums:
         try:
@@ -9,7 +9,7 @@ def sumOfThree(nums: list):
     return sum
 
 
-def AreaOfRightTriangle(base, height):
+def AreaOfRightTriangle(base: str, height: str) -> float:
     area: float = 1
     try:
         for each in [base, height]:
@@ -26,11 +26,24 @@ def AreaOfRightTriangle(base, height):
 
     return area
 
+def applesInBox(x: str, y:str) -> tuple[int, int]:
+    foreach: float = 0
+    remain: float = 0
+    
+    try:
+        x = int(x)
+        y = int(y)
+
+        remain = x % y
+        foreach = x // y
+    except Exception as e:
+        print(f"Exc: {e}")
+
+    return foreach, remain
+
 if __name__ == "__main__":
     # nums: list = [input("1:"),input("2:"),input("3:")]
     # print(sumOfThree(nums))
 
-    print(AreaOfRightTriangle(input("base: "), input("height: ")))
+    print(applesInBox("1.5", "1"))
 
-
-print(sum)
