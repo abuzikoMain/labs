@@ -130,10 +130,7 @@ def output_task_twentytwo(number: int) -> int: ## Task 22
 def output_task_twentythree(number: int) -> int: ## Task 23
     return int(str(number)[0:1:] + str(number)[2:] + str(number)[1:2:])
 
-def output_task_twentyfour(number: int) -> list: ## Task 24
-    ...
-
-def get_permutations(number):
+def get_permutations(number: int) -> list: ## Task 24
     str_number = str(number)
     if len(set(str_number)) != len(str_number):
         return "Число должно содержать только различные цифры."
@@ -141,7 +138,7 @@ def get_permutations(number):
     generate_permutations(str_number, "", permutations)
     return permutations
 
-def generate_permutations(remaining_digits, current_permutation, permutations):
+def generate_permutations(remaining_digits: str, current_permutation: str, permutations: list) -> None:
     if len(remaining_digits) == 0:
         permutations.append(int(current_permutation))
     else:
@@ -150,15 +147,17 @@ def generate_permutations(remaining_digits, current_permutation, permutations):
             new_remaining = remaining_digits[:i] + remaining_digits[i+1:]
             generate_permutations(new_remaining, current_permutation + next_digit, permutations)
 
-number = int(input("Введите число, в котором все цифры различны: "))
+def output_task_twentyfive(number: int) -> str: ## task 25
+    one_count = 0
+    ten_count = number // 10
+    for each in str(number):
+        if each == "1":
+            one_count += 1
+    return f'One count: {one_count}, ten count: {ten_count}'
 
-permutations = get_permutations(number)
-if isinstance(permutations, list):
-    print("Все возможные числа, образованные при перестановке цифр заданного числа:")
-    for num in permutations:
-        print(num)
-else:
-    print(permutations)
+# Из трехзначного числа x вычли его последнюю цифру. Когда результат разделили 
+# на 10, а к частному слева приписали последнюю цифру числа x, то получилось число 
+# 237. Найти число x. 
 
-
-print(output_task_twentytwo(451))
+def output_task_twentysix(number: int) -> int: ## Task 26
+    ...
