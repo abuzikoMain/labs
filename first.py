@@ -41,9 +41,27 @@ def applesInBox(x: str, y:str) -> tuple[int, int]:
 
     return foreach, remain
 
+def clock(m: str) -> str:
+    hours:int = 0
+    minutes: int = 0
+    try:
+        m = int(m)
+
+        while m > 60:
+            m -= 60
+            hours += 1
+
+            hours = 0 if hours == 24 else hours
+
+        minutes = m
+    except Exception as e:
+        print(f"Exc: {e}")
+
+    return f"{hours} {minutes}"
+
 if __name__ == "__main__":
     # nums: list = [input("1:"),input("2:"),input("3:")]
     # print(sumOfThree(nums))
 
-    print(applesInBox("1.5", "1"))
+    print(clock("444"))
 
