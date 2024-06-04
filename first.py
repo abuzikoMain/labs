@@ -1,8 +1,8 @@
 def sumOfThree(nums: list):
-    sum: int = 0
+    sum: float = 0
     for each in nums:
         try:
-            each = int(each)
+            each = float(each)
             sum += each
         except Exception as e:
             print(f"Exc {e}")

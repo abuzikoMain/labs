@@ -1,6 +1,6 @@
 import pytest
 
-from your_module import sumOfThree
+from first import sumOfThree
 
 def test_sumOfThree_with_valid_input():
     nums = [1, 2, 3]
@@ -24,4 +24,4 @@ def test_sumOfThree_with_negative_numbers():
 
 def test_sumOfThree_with_float_numbers():
     nums = [1.5, 2.5, 3.5]
-    assert sumOfThree(nums) == 7
+    assert sumOfThree(nums) == 7.5
