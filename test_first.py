@@ -1,6 +1,6 @@
 import pytest
 
-from first import sumOfThree, AreaOfRightTriangle, applesInBox, clock, helloWorld, nextAndPast
+from first import sumOfThree, AreaOfRightTriangle, applesInBox, clock, helloWorld, nextAndPast, parts
 
 class TestSumOfThree:
     def test_sumOfThree_with_valid_input(self):
@@ -85,3 +85,8 @@ class TestHello:
 class TestPastNext:
     def test_nextAndPast_valid_input(self):
         assert nextAndPast("145") == "The next number for the number 145.0 is 146.0\n The previous number for the number 145.0 is 144.0"
+
+class TestParts:
+    def test_parts_valid_input(self):
+        data = [12, 14, 17]
+        assert parts(data) == 22

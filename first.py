@@ -78,7 +78,7 @@ def nextAndPast(number: str) -> str:
     return output
 
 def parts(groups: list[int]) -> int:
-    count_humans: int
+    count_humans: int = 0
     if not isinstance(groups, list):
         return 0
     for each in groups:
