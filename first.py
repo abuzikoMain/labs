@@ -1,14 +1,16 @@
-a: str = input()
-b: str = input()
-c: str = input()
+def sumOfThree(nums: list):
+    sum: int = 0
+    for each in nums:
+        try:
+            each = int(each)
+            sum += each
+        except Exception as e:
+            print(f"Exc {e}")
+    return sum
 
-sum: int = 0
+if __name__ == "__main__":
+    nums: list = [input("1:"),input("2:"),input("3:")]
+    print(sumOfThree(nums))
 
-for each in [a, b, c]:
-    try:
-        each = int(each)
-        sum += each
-    except Exception as e:
-        print(f"Exc {e}")
 
 print(sum)
