@@ -59,6 +59,22 @@ def clock(m: str) -> str:
 
     return f"{hours} {minutes}"
 
+def helloWorld(string: str) -> str:
+    return f"Hello, {string}!"
+
+def nextAndPast(number: str) -> str:
+    output: str
+    try:
+        number = float(number)
+        past_num = number - 1
+        next_num = number + 1
+    except Exception as e:
+        print(f"exc {e}")
+    
+    output = f"The next number for the number {number} is {next_num}\n The previous number for the number {number} is {past_num}"
+
+    return output
+
 if __name__ == "__main__":
     # nums: list = [input("1:"),input("2:"),input("3:")]
     # print(sumOfThree(nums))
