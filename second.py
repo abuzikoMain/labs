@@ -30,10 +30,20 @@ else:
 del x, y, y_line
 
  ## Task 3
-def define_y_at_func(func: str, x: float) -> float:
-    y: float = 0
-    #???????????? Принимаем функцию и по функции получаем значение y при значении x ? 
-    print(y )
+print("Task 3")
+x = float(input("x: "))
+print("a")
+if x >= 2:
+    print("Y = 2")
+else:
+    print(f"Y = {x}")
+
+print("b")
+if x >= 3:
+    print("Y = -3")
+else:
+    print(f"Y = {x * -1}")
+del x
 
 print("Task 4, 5")## Task 4, 5
 first = int(input("first: "))
@@ -140,7 +150,8 @@ else:
 del number, str_number, is_some_char_sames, temp_dict
 
 
- ## Task 14
+## Task 14
+print("Task 14")
 str_number = input("Task 14 number: ")
 print('At last num is even' if int(str_number[-1]) % 2 == 0 else 'At last num is not even')
 del str_number
@@ -154,6 +165,20 @@ print("Task 16:", int(input("Task 16 mass: ")) // 1000)
 print("Task 17:", 530 // 130)
 
 ## Task 18 Непонимаю условие
+print("Task 18")
+months = int(input('Введите кол-во месяцев:'))
+years = 1990 + months // 12
+days=1
+months = months % 12 + 1
+if months>12:
+  years+=1
+  months-=12
+elif months<1:
+  years-=1
+  months+=12
+print(datetime.date(years, months, 1)+datetime.timedelta(days-1))
+del months, years, days
+
 
 ## Task 19
 print(input("Task 19 number: ")[::-1])
