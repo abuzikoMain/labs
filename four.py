@@ -171,3 +171,4 @@ print([item for sublist in nums for item in sublist])
 # Task 18
 print("Task 18")
 print([each**2 if each % 2 == 0 else each + 2 for each in range(20)])
+
