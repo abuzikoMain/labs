@@ -1,7 +1,108 @@
 import math
+
+
+### ВАЛИДАЦИИ НЕТ!!!!
+### ВАЛИДАЦИИ НЕТ!!!!
+### ВАЛИДАЦИИ НЕТ!!!!
+### ВАЛИДАЦИИ НЕТ!!!!
+### ВАЛИДАЦИИ НЕТ!!!!
+
+#TASK 1
+print("TASK 1")
+exchange = float(input("exchange: "))
+for each in range(1,21):
+    print(each * exchange)
+del exchange
+
+#TASK 2
+print("TASK 2")
+number = int(input("Number: "))
+for each in range(1,11):
+    print(number * each)
+del number
+
+#TASK 3
+print("TASK 3")
+a = int(input("a: "))
+b = int(input("b: "))
+sum = 0
+for each in range(a, b + 1):
+    sum = sum + each ** 2
+print(sum)
+del a, b
+
+#TASK 4
+print("TASK 4")
+a = input("a: ")
+new = ""
+for each in range(len(a) -1, -1, -1):
+    new += a[each]
+print(new)
+del new, a
+
+#TASK 5
+print("TASK 5")
+a = int(input("a: "))
+factorial = 1
+for each in range(1, a + 1):
+    factorial *=each
+print (factorial)
+del a, factorial
+
+#TASK 6
+print("TASK 6")
+
+nums = [-1,-2,-3,-5,-6,-7,-7,9,7,4,9]
+count = 0
+index = 0
+while(nums[index]<0):
+   
+   count+=1
+   index+=1
+
+print(count)
+del nums, index, count
+
+#TASK 7
+print("TASK 7")
+
+number = int(input("n: "))
+a, b = 1, 1
+while True:
+    if a > number:
+        break
+    a, b = b, a + b
+print(a)
+del number, a, b
+
+#TASK 8
+print("TASK 8")
+
+number = int(input("n: "))
+str_number = str(number)
+min_num = int(str_number[0])
+
+count = 1
+for num in str_number[1:]:
+    if int(num) < min_num:
+        min_num = int(num)
+        count = 1
+    elif int(num) == min_num:
+        count += 1
+print(count)
+del number, str_number, min_num
+
 # ##Task 9
-# print("Task 9")
-# ---------------------
+print("Task 9")
+
+n = int(input("n: "))
+f = int(input("первый член прогрессии: "))
+s = int(input("шаг арифметической прогрессии: "))
+
+if (n - f) % s == 0:
+    print(f"{n} Является")
+else:
+    print(f"{n} Не является")
 
 ##Task 10
 print("Task 10")
