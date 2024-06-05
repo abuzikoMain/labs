@@ -44,4 +44,48 @@ from random import randint
 # print(task_5([randint(0,100) for each in range(count)]))
 # del count
 
-# Task  6
+
+# # Task  6
+# def task_6(number, counter):
+#     symbols = "0123456789ABCDEF"
+    
+#     def convert_recursive(number, counter):
+#         if number == 0:
+#             return ''
+#         else:
+#             return convert_recursive(number // counter, counter) + symbols[number % counter]
+    
+#     result = convert_recursive(number, counter)
+#     return result if result else '0'
+
+
+# number = int(input("Number: "))
+# counter = int(input("counter: "))
+# print(task_6(number, counter))
+# del number, counter
+
+# # Task 7
+
+# def task_7(number):
+
+#     def is_natural(number, main_number):
+#         if number in [1, 0]:
+#             return True
+        
+#         if main_number % number == 0:
+#             return False
+#         number -= 1
+#         return is_natural(number, main_number) and True
+
+#     if number % 1 == 0 and number % number == 0 and is_natural(number - 1, number):
+#         return True
+#     else:
+#         return False
+    
+# print(task_7(82))
+
+# Task 8
+
+def task_8():
+    ...
+    
