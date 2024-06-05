@@ -1,5 +1,7 @@
 import math
-from random import randint
+from random import randint, choices
+import string
+from functools import reduce
 
 # # Task 1
 # def task_1():
@@ -84,8 +86,56 @@ from random import randint
     
 # print(task_7(82))
 
-# Task 8
 
-def task_8():
-    ...
-    
+# Task 8
+# def task_8(lst):
+#     return list(map(lambda x: x // 7 , lst))
+
+# nums = [randint(1,100) for each in range(10)]
+# print(nums)
+# print(task_8(nums))
+# del nums
+
+# # Task 9
+# def task_9(lst):
+#     return list(map(lambda x : x.title(), lst))
+
+# print(task_9(["каша",  "саша",  "паша",  "маша"]))
+
+# Task 10
+# def task_10(lst):
+#     return list(map(lambda x : hash(x), lst))
+
+# print(task_10(["каша",  "саша",  "паша",  "маша"]))
+
+# # # Task 11
+# def task_11(lst):
+#     return reduce(lambda acc, sentence: acc + sentence.count('сети'), sentences, 0)
+
+# sentences = ['йцаи папрвп ыаым аывавы', 
+#             'ыва фывыфв сети', 
+#             'ываыв цк ɜ ыфв сети'] 
+
+# print(task_11(sentences))
+# del sentences
+
+# # Task 12
+# def task_12(lst):
+#     return list(filter(lambda x: x % 7 == 0 , lst))
+
+# nums = [randint(1,100) for each in range(10)]
+# print(nums)
+# print(task_12(nums))
+# del nums
+
+
+# Task 13 
+def task_13(names, math, russian, it):
+    return list(zip(names, math, russian, it))
+
+math = [randint(35,100) for each in range(50)]
+russian = [randint(35,100) for each in range(50)]
+it = [randint(35,100) for each in range(50)]
+names = [ ''.join(choices(string.ascii_letters, k=5)) for each in range(50)]
+
+print(task_13(names, math, russian, it))
