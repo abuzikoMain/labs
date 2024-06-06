@@ -60,3 +60,77 @@ import string
 #         count[word] = count.get(word, 0) + 1
 # for key, val in count.items():
 #     print(f" word: {key} count: {val}")
+
+# del lines, text, count
+
+# Task 7
+# print("Task 7")
+# lines = randint(1, 5)
+# text = '\n'.join(
+#     ' '.join(
+#         ''.join(choices(string.ascii_letters, k=randint(5, 9)))
+#         for _ in range(randint(1, 10))
+#     )
+#     for _ in range(lines)
+# )
+
+# max_len_word = ""
+# for line in text.splitlines():
+#     for word in line.split():
+#         if len(word) > len(max_len_word):
+#               max_len_word = word
+# print(max_len_word)
+# del lines, text, max_len_word
+
+# Task 8 
+# print("Task 8")
+# lines = randint(1, 5)
+# text = '\n'.join(
+#     ' '.join(
+#         ''.join(choices(string.ascii_letters, k=randint(5, 9)))
+#         for _ in range(randint(1, 10))
+#     )
+#     for _ in range(lines)
+# )
+# # text = "test apply worfd common\ncommon do apply like\ncommon this black"
+# count = {}
+# most_common = ""
+# for line in text.splitlines():
+#     for word in line.split():
+#         count[word] = count.get(word, 0) + 1
+#         if count[word] > count.get(most_common, 0):
+#             most_common = word
+# print(most_common)
+# del lines, text, count, most_common
+
+# Task 9
+# print("Task 9")
+
+# text = """
+# Иванов лыжи 1
+# Петров коньки 3
+# Иванов сумка 1
+# Иванов палки 2
+# Петров куртка 1
+# """
+
+# sales = {}
+# for line in text.strip().splitlines():
+#     word = line.split(" ")
+#     if sales.get(word[0], False) == False:
+#         sales[word[0]] = {word[1]: int(word[2])}
+#     else:
+#         temp_dict = sales.get(word[0])
+#         temp_dict[word[1]] = temp_dict.get(word[1], 0) + int(word[2])
+#         sales[word[0]] = temp_dict
+
+# for names, goods in sales.items():
+#     str_goods = ''
+#     for names_goods, val in goods.items():
+#         str_goods += f"{names_goods} {val}\n"
+#     print(f'{names}:\n' + str_goods)
+
+# del sales, text
+
+# Task 10
+# print("Task 10")
