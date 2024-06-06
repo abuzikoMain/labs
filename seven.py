@@ -1,5 +1,6 @@
 from random import randint, choice, choices
 import string
+import re
 
 # Task 1
 # print('Task 1')
@@ -141,3 +142,7 @@ import string
 #     else:
 #         print("Файлы идентичны.")
 # del line_number
+
+# Task 9
+# print('Task 9')
+
