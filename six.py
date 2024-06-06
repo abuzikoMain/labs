@@ -104,33 +104,38 @@ import string
 # del lines, text, count, most_common
 
 # Task 9
-# print("Task 9")
+print("Task 9")
 
-# text = """
-# Иванов лыжи 1
-# Петров коньки 3
-# Иванов сумка 1
-# Иванов палки 2
-# Петров куртка 1
-# """
+text = """
+Иванов лыжи 1
+Петров коньки 3
+Иванов сумка 1
+Иванов палки 2
+Петров куртка 1
+"""
 
-# sales = {}
-# for line in text.strip().splitlines():
-#     word = line.split(" ")
-#     if sales.get(word[0], False) == False:
-#         sales[word[0]] = {word[1]: int(word[2])}
-#     else:
-#         temp_dict = sales.get(word[0])
-#         temp_dict[word[1]] = temp_dict.get(word[1], 0) + int(word[2])
-#         sales[word[0]] = temp_dict
+sales = {}
 
-# for names, goods in sales.items():
-#     str_goods = ''
-#     for names_goods, val in goods.items():
-#         str_goods += f"{names_goods} {val}\n"
-#     print(f'{names}:\n' + str_goods)
+for line in text.strip().splitlines():
+    words = line.split(" ")
+    name, product, amount = words[0], words[1], int(words[2])
+
+    if name not in sales:
+        sales[name] = {product: amount}
+    else:
+        sales[name][product] = sales[name].get(product, 0) + amount
+
+
+for names, product in sales.items():
+    str_product = ''
+    for names_product, val in product.items():
+        str_product += f"{names_product} {val}\n"
+    print(f'{names}:\n' + str_product)
 
 # del sales, text
 
 # Task 10
 # print("Task 10")
+
+
+
