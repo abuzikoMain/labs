@@ -145,3 +145,12 @@ import re
 
 # Task 9
 # print('Task 9')
+
+Stations = [f'Station: {_}' for _ in range(randint(1,10))]
+
+text_input = '''
+Иванов Сергей 1 5 
+Сергеев Петр 3 5 
+Петров Кирилл 1 2
+'''
+#
