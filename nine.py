@@ -145,7 +145,7 @@ def search_nearest_in_sorted_arr(x):
 # print(s)
 
 # for row in range(0, row_c):
-#     for col in range(0, col_c):
+#     for col in range(0, col_c):   
 #         matrix[row][col] -= s
 # print(matrix)
 
@@ -159,3 +159,35 @@ def search_nearest_in_sorted_arr(x):
 
 # # #task 20
 # print('Task 20')
+# ????
+
+# # task 21
+print('Task 21')
+
+def n_largest_values_nd(arr, n):
+    # Находим индексы n наибольших элементов в каждом измерении
+    indices = np.argpartition(-arr, n)[:n]
+    # Преобразуем индексы в координаты элементов в массиве
+    coords = np.unravel_index(indices, arr.shape)
+    # Получаем значения элементов по координатам
+    values = arr[coords]
+    return values
+
+# Пример использования
+arr = np.random.randint(0, 100, size=(4, 5, 3))  # Пример тремерного массива размером 4x5x3
+n = 3
+result = n_largest_values_nd(arr, n)
+print(f"{n} наибольших значений в массиве:\n{result}")
+
+
+def largest_values(arr, n):
+    return np.sort(arr)[-n:]
+arr = np.random.randint(0, 100, size=(9, 9))
+n = int(input('N numbers:'))
+result = largest_values(arr, n)
+print("n наибольших значений:", result)
+
+
+# # task 22
+print('Task 22')
+
