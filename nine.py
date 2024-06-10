@@ -38,15 +38,22 @@ import math
 # max_elemets = size_1 * size_2
 # a = np.random.sample(size=(size_1,size_2))
 # print(a.min(), a.max())
+# del size_1, size_2, max_elemets, a
 
 # #Task 7
 # print('Task 7')
+# Z = np.zeros((3,3), dtype=int)
+# Z[1][1] = 1
+# print(Z)
+# del Z
+
 
 # #Task 8
 # print('Task ')
 # Z = np.zeros((8,8), dtype=int)
 # Z[1::2,::2] = 1
 # Z[::2,1::2] = 1
+# del Z
 
 # #Task 9
 # print('Task 9')
@@ -117,8 +124,22 @@ import math
 
 # #task 16
 # print('Task 16')
-# def search_nearest_in_sorted_arr(x):
-#     ... # biqubic search 
+# def find_nearest_value(matrix, value):
+#     flattened_matrix = matrix.flatten()
+#     idx = np.abs(flattened_matrix - value).argmin()
+#     nearest_value = flattened_matrix[idx]
+#     idx = np.unravel_index(idx, matrix.shape)
+#     return nearest_value, idx
+
+
+# matrix = np.array([[1, 2, 3],
+#                    [4, 5, 6],
+#                    [7, 8, 9]])
+
+# value = 4.5
+
+# nearest_value, idx = find_nearest_value(matrix, value)
+# print(nearest_value)
 
 # #task 17
 # print('Task 17')
