@@ -93,7 +93,7 @@ import math
 
 # #task 14
 # print('Task 14')
-# vector1 = np.array([randint(1,10) for _ in range(10)], float)
+# vector1 = np.array(([randint(1,10) for _ in range(10)]), float)
 # vector2 = np.array([randint(1,10) for _ in range(10)], float)
 
 # def eq_vector(vector1, vector2):
@@ -121,17 +121,41 @@ print('Task 16')
 def search_nearest_in_sorted_arr(x):
     ... # biqubic search 
 
-#task 17
-print('Task 17')
-dtype = np.dtype([('x', float), ('y', float), ('color', [('r', int), ('g', int), ('b', int)])])
+# #task 17
+# print('Task 17')
+# dtype = np.dtype([('x', float), ('y', float), ('color', [('r', int), ('g', int), ('b', int)])])
 
-data = np.zeros(5, dtype=dtype)
+# data = np.zeros(5, dtype=dtype)
 
-data['x'] = [1.0, 2.0, 3.0, 4.0, 5.0]
-data['y'] = [6.0, 7.0, 8.0, 9.0, 10.0]
-data['color']['r'] = [255, 128, 0, 255, 0]
-data['color']['g'] = [0, 255, 128, 255, 0]
-data['color']['b'] = [0, 0, 255, 0, 255]
+# data['x'] = [1.0, 2.0, 3.0, 4.0, 5.0]
+# data['y'] = [6.0, 7.0, 8.0, 9.0, 10.0]
+# data['color']['r'] = [255, 128, 0, 255, 0]
+# data['color']['g'] = [0, 255, 128, 255, 0]
+# data['color']['b'] = [0, 0, 255, 0, 255]
 
-#task 18
-print('Task 18')
+# #task 18
+# print('Task 18')
+
+# row_c = 2
+# col_c = 4
+
+# matrix = np.random.rand(row_c,col_c) * 10
+# print(matrix)
+# s = np.sum(matrix) / (row_c*col_c)
+# print(s)
+
+# for row in range(0, row_c):
+#     for col in range(0, col_c):
+#         matrix[row][col] -= s
+# print(matrix)
+
+# # #task 19
+# # print('Task 19')
+# matrix = np.random.randint(0, 10, size=(4, 5))
+# print(matrix)
+# cp_matrix = matrix.copy()
+# matrix[0], matrix[1] = cp_matrix[1], cp_matrix[0]
+# print(matrix)
+
+# # #task 20
+# print('Task 20')
