@@ -21,18 +21,18 @@
 #           Текущий 
 #           элемент 
 
-def insertionsort(L):
-    for i in range(1, len(L)):
-        to_insert = L[i]
-        j = i - 1
-        while j >= 0 and to_insert < L[j]:
-            L[j + 1] = L[j]
-            j -= 1
-        L[j + 1] = to_insert
-    return L
+# def insertionsort(L):
+#     for i in range(1, len(L)):
+#         to_insert = L[i]
+#         j = i - 1
+#         while j >= 0 and to_insert < L[j]:
+#             L[j + 1] = L[j]
+#             j -= 1
+#         L[j + 1] = to_insert
+#     return L
 
-L = [3,6,8,2,9,1,7,0,5,9,4] 
-print(insertionsort(L)) #Ожидаемый результат [0,1,2,3,4,5,6,7,8,9,9]
+# L = [3,6,8,2,9,1,7,0,5,9,4] 
+# print(insertionsort(L)) #Ожидаемый результат [0,1,2,3,4,5,6,7,8,9,9]
 
 # Пример исходных данных и результата:  
 # [3,6,8,2,9,1,7,0,5,9,4] -> [0,1,2,3,4,5,6,7,8,9,9] 
@@ -61,9 +61,5 @@ print(insertionsort(L)) #Ожидаемый результат [0,1,2,3,4,5,6,7,
 # [],      []      -> [1,2,3,4,5,6] 
 # Сложность шага слияния O(n) 
 
-def mergesort(L): 
-   pass # Реализуйте функцию  
-   
-L = [3,6,8,2,9,1,7,0,5,9,4] 
-print(mergesort(L)) # Ожидаемый результат [0,1,2,3,4,5,6,7,8,9,9]
-
+def mergesort(a, left, mid, right):
+    ...
