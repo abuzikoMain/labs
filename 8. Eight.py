@@ -87,29 +87,6 @@ print('Task 7')
 is_closed = lambda x: True if x == ')' else False
 is_opened = lambda x: True if x == '(' else False
 
-# def slicer_st(st):
-#     opened = []
-#     for index in range(len(st)):
-#         if len(opened) == 0 and is_closed(st[index]):
-#             return ''
-        
-#         if is_opened(st[index]):
-#             opened.append([st[index], index])
-
-#         if is_closed(st[index]):
-#             temp = opened.pop(-1)
-#             st = st[:temp[-1]] + st[index + 1:]
-#             break
-
-#         if index == len(st) - 1:
-#             if not opened:
-#                 return st
-#             else:
-#                 return ''
-#     return slicer_st(st)
-# Bad solution
-#### Очень плохо работает переделать! callback фигня! и сложность n^2
-
 def slicer_st(st):
     pack = []
     reslut = ''
