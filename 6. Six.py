@@ -3,7 +3,7 @@ import string
 from functools import reduce
 import re
 
-Task 1
+# Task 1
 print('Task 1')
 number_counts = {}
 numbers = [randint(0,100) for each in range(50)]
@@ -12,9 +12,9 @@ for number in numbers:
 print('Количество встреч каждой цифры:')
 for digit, count in sorted(number_counts.items()):
     print(f'Цифра {digit}: {count} раз(a)')
-del digit_counts, numbers
+del number_counts, numbers
 
-Task 2
+# Task 2
 print('Task 2')
 set1 = {randint(0,100) for num in range(50)}
 set2 = {randint(0,100) for num in range(50)}
@@ -26,7 +26,7 @@ else:
     print('В обоих списках нет общих чисел')
 del set1, set2, common_numbers
 
-Task 3
+# Task 3
 print('Task 3')
 text = [''.join(choices(string.ascii_letters, k=5)) for each in range(50)]
 unique_words = set(text)
@@ -34,7 +34,7 @@ word_count = len(unique_words)
 print(f'Количество слов в тексте: {word_count}')
 del text, unique_words, word_count
 
-Task 4
+# Task 4
 print('Task 4')
 union = set()
 all = set()
@@ -53,14 +53,14 @@ print(len(all))
 print('\n'.join(sorted(all)))
 
 
-Task 5
+# Task 5
 print('Task 5')
 set1 = {randint(0,10) for num in range(5)}
 set2 = {randint(0,10) for num in range(5)}
 print(set.union(set2))
 del set1, set2
 
-Task 6
+# Task 6
 print('Task 6')
 
 lines = randint(1, 5)
@@ -82,7 +82,7 @@ for key, val in count.items():
 
 del lines, text, count
 
-Task 7
+# Task 7
 print('Task 7')
 lines = randint(1, 5)
 text = '\n'.join(
@@ -101,7 +101,7 @@ for line in text.splitlines():
 print(max_len_word)
 del lines, text, max_len_word
 
-Task 8 
+# Task 8 
 print('Task 8')
 lines = randint(1, 5)
 text = '\n'.join(
@@ -122,7 +122,7 @@ for line in text.splitlines():
 print(most_common)
 del lines, text, count, most_common
 
-Task 9
+# Task 9
 print('Task 9')
 
 text = '''
@@ -153,7 +153,7 @@ for names, product in sales.items():
 
 del sales, text
 
-Task 10
+# Task 10
 print('Task 10')
 regions = {}
 
