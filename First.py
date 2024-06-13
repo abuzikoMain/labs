@@ -89,8 +89,12 @@ def parts(groups: list[str]) -> int:
 
     return count_pc
 
-def lace_length(a, b, l, N):
-    ...
+def lace_length(a, b, L, N):
+    a = int(input())
+    b = int(input())
+    L = int(input())
+    N = int(input())
+    print(2 * L + (2 * N - 1) * a + 2 * (N - 1) * b)
 
 if __name__ == "__main__":
     ...

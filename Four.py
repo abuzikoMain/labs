@@ -4,7 +4,7 @@ import string
 #Task 1
 print("Task 1")
 len_list = 12
-print([randrange(163, 191) for i in range(len_list)])
+print([randrange(163, 191) for _ in range(len_list)])
 del len_list
 
 #Task 2
@@ -30,7 +30,7 @@ print("Task 4")
 print("Task 5")
 count = int(input("Classes: "))
 sum = 0
-for each in [randrange(22,32) for each in range(count)]:
+for each in [randrange(22,32) for _ in range(count)]:
     sum += each
 if sum // 1000 > 0:
     print("True", sum)
@@ -38,7 +38,7 @@ del count, sum
 
 #Task 6
 print("Task 6")
-nums = [randrange(35,100) for each in range(50)]
+nums = [randrange(35,100) for _ in range(50)]
 a_output, b_output = [], []
 for each in nums:
     if each % 2 == 0:
@@ -51,10 +51,10 @@ del nums, a_output, b_output
 #Task 7
 print("Task 7")
 MIN_VALUE = 45
-math = [randrange(35,101) for each in range(50)]
-russian = [randrange(35,101) for each in range(50)]
-it = [randrange(35,101) for each in range(50)]
-names = [ ''.join(choices(string.ascii_letters, k=5)) for each in range(50)]
+math = [randrange(35,101) for _ in range(50)]
+russian = [randrange(35,101) for _ in range(50)]
+it = [randrange(35,101) for _ in range(50)]
+names = [ ''.join(choices(string.ascii_letters, k=5)) for _ in range(50)]
 count = 1
 
 for abb in range(len(names)):
@@ -67,7 +67,7 @@ del MIN_VALUE, math, russian, it, names, count
 
 #Task 8
 print("Task 8")
-nums = [randrange(0,10) for each in range(100)]
+nums = [randrange(0,10) for _ in range(100)]
 
 unique = {}
 for each in nums:
@@ -77,7 +77,7 @@ del nums, unique
 
 # Task 9
 print("Task 9")
-nums = [randrange(0,10) for each in range(6)]
+nums = [randrange(0,10) for _ in range(6)]
 is_even = 0 if len(nums) % 2 == 0 else 1
 print(nums)
 for index in range(0, len(nums) - 1 - is_even, 2):
@@ -87,7 +87,7 @@ del nums, is_even
 
 # Task 10
 print("Task 10")
-nums = [randrange(0,10) for each in range(9)]
+nums = [randrange(0,10) for _ in range(9)]
 k1 = 3
 k2 = 6
 print(nums)
@@ -112,7 +112,7 @@ del names_len, count, names
 
 # Task 12
 print("Task 12")
-nums = [randint(39,47) for each in range(30)]
+nums = [randint(39,47) for _ in range(30)]
 unique = []
 for each in nums:
     if not each in unique:
@@ -126,7 +126,7 @@ first_count = randint(10,30)
 groups = []
 for each in range(3):
     count = randint(10,30)
-    groups.append([ ''.join(choices(string.ascii_letters, k=5)) for each in range(count)])   
+    groups.append([ ''.join(choices(string.ascii_letters, k=5)) for _ in range(count)])   
 
 count = 0
 min_group = groups[0]
@@ -147,7 +147,7 @@ del first_count, count, min_group, max_group, all_student
 # Task 14
 print("Task 14")
 
-grades = [randint(2,5) for each in range(30)]
+grades = [randint(2,5) for _ in range(30)]
 sum_grades = 0
 print(grades)
 for each in grades:
@@ -171,3 +171,4 @@ print([item for sublist in nums for item in sublist])
 # Task 18
 print("Task 18")
 print([each**2 if each % 2 == 0 else each + 2 for each in range(20)])
+
