@@ -61,5 +61,34 @@
 # [],      []      -> [1,2,3,4,5,6] 
 # Сложность шага слияния O(n) 
 
-def mergesort(a, left, mid, right):
-    ...
+
+def mergesort(src):
+    if len(src) <= 1:
+        return src
+
+    mid = len(src) // 2
+    left = mergesort(src[:mid])
+    right = mergesort(src[mid:])
+
+    return merge(left, right)
+
+def merge(left, right):
+    res = []
+    left_index = 0
+    right_index = 0
+
+    while left_index < len(left) and right_index < len(right):
+        if left[left_index] < right[right_index]:
+            res.append(left[left_index])
+            left_index += 1
+        else:
+            res.append(right[right_index])
+            right_index += 1
+
+    res.extend(left[left_index:])
+    res.extend(right[right_index:])
+
+    return res
+   
+print(mergesort([1,4,6,2,3,5]))
+
