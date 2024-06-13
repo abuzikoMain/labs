@@ -21,18 +21,17 @@
 #           Текущий 
 #           элемент 
 
-# def insertionsort(L):
-#     for i in range(1, len(L)):
-#         to_insert = L[i]
-#         j = i - 1
-#         while j >= 0 and to_insert < L[j]:
-#             L[j + 1] = L[j]
-#             j -= 1
-#         L[j + 1] = to_insert
-#     return L
+def insertionsort(L):
+    for i in range(1, len(L)):
+        to_insert = L[i]
+        j = i - 1
+        while j >= 0 and to_insert < L[j]:
+            L[j + 1] = L[j]
+            j -= 1
+        L[j + 1] = to_insert
+    return L
 
-# L = [3,6,8,2,9,1,7,0,5,9,4] 
-# print(insertionsort(L)) #Ожидаемый результат [0,1,2,3,4,5,6,7,8,9,9]
+L = [3,6,8,2,9,1,7,0,5,9,4] 
 
 # Пример исходных данных и результата:  
 # [3,6,8,2,9,1,7,0,5,9,4] -> [0,1,2,3,4,5,6,7,8,9,9] 
@@ -89,6 +88,24 @@ def merge(left, right):
     res.extend(right[right_index:])
 
     return res
-   
-print(mergesort([1,4,6,2,3,5]))
+#------------------------------------
+import random, time
+LEN_INPUT_LIST = 10000
+get_data = lambda y: [random.randint(0,y*10) for _ in range(y)]
+data = get_data(LEN_INPUT_LIST)
+
+t1 = time.perf_counter() 
+insertionsort(data) 
+t2 = time.perf_counter() 
+print("Time sorting insert: {:.2f} ms".format((t2 - t1) * 1000.))
+
+t1 = time.perf_counter() 
+mergesort(data) 
+t2 = time.perf_counter() 
+print("Time sorting merge: {:.2f} ms".format((t2 - t1) * 1000.))
+
+# print(mergesort(lst))
+# print(insertionsort(lst)) 
+
+ 
 
