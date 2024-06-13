@@ -153,4 +153,53 @@ text_input = '''
 Сергеев Петр 3 5 
 Петров Кирилл 1 2
 '''
-#
+
+
+N, P = input().split()
+N, P = int(N), int(P)
+cnt = [0] * (N-1)
+for i in range(P):
+    fam, name, pFrom, pTo = input().split()
+    pFrom, pTo = int(pFrom), int(pTo)
+    for p in range(pFrom, pTo):
+        cnt[p-1] += 1
+
+pMin = min(cnt)
+for p in range(N-1):
+    if cnt[p] == pMin:
+        print("%d-%d" % (p+1, p+2))
+
+
+# # Task 10
+# print('Task 10')
+
+# myFile = open("input.txt", "r", encoding="utf8")
+# k = int(myFile.readline())
+# myList = []
+
+# for line in myFile:
+#     newLine = line.split()
+#     if int(newLine[-1]) >= 40 and int(newLine[-2]) >= 40 and int(newLine[-3]) >= 40:
+#         myList.append(newLine)
+
+# myFile.close()
+# myList.sort(key=lambda a: int(a[-1]) + int(a[-2]) + int(a[-3]))
+# myList.reverse()
+
+# pnts = []
+# for i in myList:
+#     sum = int(i[-1]) + int(i[-2]) + int(i[-3])
+#     pnts.append(sum)
+# n = len(pnts)
+ 
+# def points_competition(n, k, pnts):
+#     if n <= k:
+#         return 0
+#     elif pnts[k] == pnts[0]:
+#         return 1
+#     for i in range(k, 0, -1):
+#         if pnts[i] < pnts[i - 1]:
+#             return pnts[i - 1]
+ 
+ 
+# print(points_competition(n, k, pnts))
