@@ -177,24 +177,16 @@ import math
 
 # # #task 20
 # print('Task 20')
-# ????
+# def dist(p1, p2):
+#     return math.hypot(p2[0] - p1[0], p2[1] - p1[1])
+
+# def dists(points):
+#     return [dist(p1, p2) for p1, p2 in zip(points[:-1], points[1:])]
+
+# print(dists([(0, 1), (2, 4), (5, 1), (5, 5), (7, 2)]))
 
 # # # task 21
 # print('Task 21')
-# def n_largest_values_nd(arr, n):
-#     # Находим индексы n наибольших элементов в каждом измерении
-#     indices = np.argpartition(-arr, n)[:n]
-#     # Преобразуем индексы в координаты элементов в массиве
-#     coords = np.unravel_index(indices, arr.shape)
-#     # Получаем значения элементов по координатам
-#     values = arr[coords]
-#     return values
-# # Пример использования
-# arr = np.random.randint(0, 100, size=(4, 5, 3))  # Пример тремерного массива размером 4x5x3
-# n = 3
-# result = n_largest_values_nd(arr, n)
-# print(f"{n} наибольших значений в массиве:\n{result}")
-#--------------------------------------------------------
 # def largest_values(arr, n):
 #     return np.sort(arr)[-n:]
 # arr = np.random.randint(0, 100, size=(9, 9))
